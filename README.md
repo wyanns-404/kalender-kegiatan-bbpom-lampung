@@ -1,102 +1,105 @@
-# Filament Demo App
+# 📆 Kalender Kegiatan BBPOM Bandar Lampung
 
-A demo application to illustrate how Filament Admin works.
+![Kalender Demo](https://github.com/wyanns-404/wyanns-404.github.io/blob/main/publicAssets/img/kalender-bbpom/Screenshot%20Kalender%20Kegiatan%20BBPOM%20di%20Bandar%20Lampung.png?raw=true)
 
-![Filament Demo](https://github.com/filamentphp/demo/assets/171715/899161a9-3c85-4dc9-9599-13928d3a4412)
+**Kalender Kegiatan** adalah sistem manajemen kegiatan berbasis kalender interaktif untuk BBPOM Bandar Lampung. Dibangun menggunakan Laravel, FullCalendar.js, dan Filament Admin.
 
-[Open in Gitpod](https://gitpod.io/#https://github.com/filamentphp/demo) to edit it and preview your changes with no setup required.
+---
 
-## Installation
+## 🚀 Installation
 
-Clone the repo locally:
-
+### 1. Clone repository:
 ```sh
-git clone https://github.com/laravel-filament/demo.git filament-demo && cd filament-demo
+git clone https://github.com/wyanns-404/kalender-kegiatan-bbpom-lampung.git kalender-kegiatan-bbpom-lampung && cd kalender-kegiatan-bbpom-lampung
 ```
 
-Install PHP dependencies:
+### 2. Install PHP dependencies:
 
 ```sh
 composer install
 ```
 
-Setup configuration:
+### 3. Install NPM dependencies:
+
+```sh
+npm install
+```
+
+### 4. Setup configuration:
 
 ```sh
 cp .env.example .env
 ```
 
-Generate application key:
+### 5. Generate application key:
 
 ```sh
 php artisan key:generate
 ```
 
-Create an SQLite database. You can also use another database (MySQL, Postgres), simply update your configuration accordingly.
-
-```sh
-touch database/database.sqlite
-```
-
-Run database migrations:
+### 6. Run database migrations:
 
 ```sh
 php artisan migrate
 ```
 
-Run database seeder:
+### 7. Seed the database:
 
 ```sh
 php artisan db:seed
 ```
 
-> **Note**  
-> If you get an "Invalid datetime format (1292)" error, this is probably related to the timezone setting of your database.  
-> Please see https://dba.stackexchange.com/questions/234270/incorrect-datetime-value-mysql
-
-
-Create a symlink to the storage:
+### 8. Run the dev server:
 
 ```sh
-php artisan storage:link
+composer run dev
 ```
 
-Run the dev server (the output will give the address):
+---
 
-```sh
-php artisan serve
+## ✅ Access the Admin Dashboard
+
+Buka aplikasi di browser:
+
+```
+http://localhost:8000/admin
 ```
 
-You're ready to go! Visit the url in your browser, and login with:
+Login menggunakan kredensial berikut:
 
--   **Username:** admin@filamentphp.com
--   **Password:** password
+* **Username:** `wayan@example.com`
+* **Password:** `11111111`
 
-## Features to explore
+---
 
-### Relations
+## 🗂️ Features to Explore
 
-#### BelongsTo
-- ProductResource
-- OrderResource
-- PostResource
+### 📅 Main Calendar
 
-#### BelongsToMany
-- CategoryResource\RelationManagers\ProductsRelationManager
+* Month View
+* Week View
+* Day View
+* List View
+* Event Click → Modal with Event Details
+* Upcoming Events Display
+* Real-time Time Indicator
+* Private Content in Modal (Visible to Staff Only)
+* Event CRUD (Admin Only)
+* Event Visibility Settings (Admin Only)
 
-#### HasMany
-- OrderResource\RelationManagers\PaymentsRelationManager
+---
 
-#### HasManyThrough
-- CustomerResource\RelationManagers\PaymentsRelationManager
+## ⚙️ Tech Stack
 
-#### MorphOne
-- OrderResource -> Address
+### 🧠 Backend
+- **Laravel 12** – Framework PHP modern untuk pengembangan web
+- **Filament 3** – Admin Panel yang ringan dan fleksibel untuk Laravel
+- **PHP 8.2** – Bahasa pemrograman backend yang digunakan
+- **MySQL / MariaDB** – Sistem manajemen basis data relasional
 
-#### MorphMany
-- ProductResource\RelationManagers\CommentsRelationManager
-- PostResource\RelationManagers\CommentsRelationManager
+### 🎨 Frontend
+- **FullCalendar.js** – Kalender interaktif (dayGrid, timeGrid, list, interaction)
+- **Tailwind CSS 4** – Utilitas CSS modern untuk styling cepat dan responsif
+- **Vite** – Bundler cepat untuk frontend modern
 
-#### MorphToMany
-- BrandResource\RelationManagers\AddressRelationManager
-- CustomerResource\RelationManagers\AddressRelationManager
+---
