@@ -1,0 +1,429 @@
+/* Enhanced CSS Variables */
+:root {
+  --primary: #28166f;
+  --primary-light: #3d2b7a;
+  --accent: #00923f;
+  --accent-light: #10a855;
+  --white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+
+/* Enhanced Font Configuration */
+.font-inter {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Enhanced Utility Classes */
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-primary\/10 {
+  background-color: rgba(40, 22, 111, 0.1);
+}
+
+.bg-primary\/20 {
+  background-color: rgba(40, 22, 111, 0.2);
+}
+
+.hover\:bg-primary\/90:hover {
+  background-color: rgba(40, 22, 111, 0.9);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--primary);
+}
+
+.focus\:ring-accent:focus {
+  --tw-ring-color: var(--accent);
+}
+
+/* Enhanced FullCalendar Styles */
+.fc {
+  font-family: 'Inter', sans-serif !important;
+  --fc-border-color: rgba(229, 231, 235, 0.8);
+  --fc-button-text-color: #ffffff;
+  --fc-button-bg-color: var(--primary);
+  --fc-button-border-color: var(--primary);
+  --fc-button-hover-bg-color: var(--primary-light);
+  --fc-button-hover-border-color: var(--primary-light);
+  --fc-button-active-bg-color: var(--primary);
+  --fc-button-active-border-color: var(--primary);
+}
+
+.fc .fc-toolbar {
+  margin-bottom: 2rem !important;
+  padding: 0 1rem !important;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  color: var(--gray-900) !important;
+  background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: none !important;
+}
+
+.fc .fc-button-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light)) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1.5rem !important;
+  border-radius: 1rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(40, 22, 111, 0.3) !important;
+  text-transform: none !important;
+  font-size: 0.875rem !important;
+}
+
+.fc .fc-button-primary:hover {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary)) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(40, 22, 111, 0.4) !important;
+}
+
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light)) !important;
+  transform: translateY(0) !important;
+  box-shadow: 0 4px 12px rgba(40, 22, 111, 0.3) !important;
+}
+
+.fc .fc-button-primary:focus {
+  box-shadow: 0 0 0 3px rgba(40, 22, 111, 0.2), 0 4px 12px rgba(40, 22, 111, 0.3) !important;
+  outline: none !important;
+}
+
+.fc .fc-daygrid-day {
+  border: 1px solid rgba(229, 231, 235, 0.6) !important;
+  transition: all 0.2s ease !important;
+  position: relative !important;
+}
+
+.fc .fc-daygrid-day:hover {
+  background: linear-gradient(135deg, rgba(40, 22, 111, 0.02), rgba(0, 146, 63, 0.02)) !important;
+  transform: translateY(-1px) !important;
+}
+
+.fc .fc-daygrid-day-top {
+  padding: 0.75rem !important;
+}
+
+.fc .fc-daygrid-day-number {
+  color: var(--gray-700) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  font-size: 0.875rem !important;
+  transition: all 0.2s ease !important;
+}
+
+.fc .fc-daygrid-day-number:hover {
+  color: var(--primary) !important;
+  transform: scale(1.1) !important;
+}
+
+.fc .fc-day-today {
+  background: linear-gradient(135deg, rgba(40, 22, 111, 0.08), rgba(0, 146, 63, 0.05)) !important;
+  border: 2px solid rgba(40, 22, 111, 0.2) !important;
+}
+
+.fc .fc-day-today .fc-daygrid-day-number {
+  color: var(--primary) !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.fc .fc-event {
+  border: none !important;
+  border-radius: 0.75rem !important;
+  padding: 0.5rem 0.75rem !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.fc .fc-event::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05)) !important;
+  pointer-events: none !important;
+}
+
+.fc .fc-event:hover {
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+  z-index: 10 !important;
+}
+
+.fc .fc-event-title {
+  font-weight: 600 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Enhanced Event Category Colors */
+.fc .fc-event.meeting {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light)) !important;
+  color: white !important;
+}
+
+.fc .fc-event.training {
+  background: linear-gradient(135deg, var(--accent), var(--accent-light)) !important;
+  color: white !important;
+}
+
+.fc .fc-event.event {
+  background: linear-gradient(135deg, #f97316, #ea580c) !important;
+  color: white !important;
+}
+
+.fc .fc-event.deadline {
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  color: white !important;
+}
+
+/* Enhanced Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(135deg, var(--gray-100), var(--gray-50));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+  transform: scale(1.1);
+}
+
+/* Enhanced Responsive adjustments */
+@media (max-width: 768px) {
+  .fc .fc-toolbar {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 0 0.5rem !important;
+  }
+  
+  .fc .fc-toolbar-chunk {
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  .fc .fc-button-group {
+    margin: 0 !important;
+  }
+  
+  .fc .fc-toolbar-title {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+  }
+  
+  .fc .fc-button-primary {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.75rem !important;
+  }
+}
+
+/* Enhanced Mobile sidebar styles */
+@media (max-width: 1023px) {
+  #sidebar {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+  }
+  
+  #sidebar.translate-x-0 {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Enhanced Animation classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bounce-gentle {
+  animation: bounceGentle 0.6s ease-out;
+}
+
+@keyframes bounceGentle {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.pulse-soft {
+  animation: pulseSoft 2s infinite;
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.scale-in {
+  animation: scaleIn 0.3s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Enhanced Glass morphism effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced Hover effects for interactive elements */
+.interactive-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Focus styles */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(40, 22, 111, 0.2);
+}
+
+/* Enhanced Calendar container */
+.calendar-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  backdrop-filter: blur(20px);
+}
+
+/* Enhanced Modal backdrop */
+.modal-backdrop {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(40, 22, 111, 0.2));
+  backdrop-filter: blur(10px);
+}
+
+/* Enhanced Button gradients */
+.btn-gradient-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  transition: all 0.3s ease;
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(40, 22, 111, 0.3);
+}
+
+.btn-gradient-accent {
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  transition: all 0.3s ease;
+}
+
+.btn-gradient-accent:hover {
+  background: linear-gradient(135deg, var(--accent-light), var(--accent));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 146, 63, 0.3);
+}
